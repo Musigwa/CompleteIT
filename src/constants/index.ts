@@ -1,1 +1,9 @@
-export { PROGRESS } from './routeNames';
+// Route Names
+export const PROGRESS = 'My startup progress';
+
+// Redux Types
+export const actionTypes = {
+  TOGGLE_STEP: 'TOGGLE_STEP',
+  COMPLETE_PHASE: 'COMPLETE_PHASE',
+  DISPLAY_FACT: 'DISPLAY_FACT',
+};

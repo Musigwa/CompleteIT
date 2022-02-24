@@ -7,6 +7,10 @@ const Stack = createNativeStackNavigator();
 
 export default () => (
   <Stack.Navigator>
-    <Stack.Screen name={PROGRESS} component={Progress} />
+    <Stack.Screen
+      name={PROGRESS}
+      component={Progress}
+      options={{ headerTitleStyle: { fontWeight: 'bold', fontSize: 18 } }}
+    />
   </Stack.Navigator>
 );

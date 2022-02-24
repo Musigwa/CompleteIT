@@ -3,8 +3,15 @@ import { Text, useColorScheme, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import styles from '../styles';
 
+type stepType = {
+  name: string;
+  completed: boolean;
+};
+
 const Section: React.FC<{
   title: string;
+  completed: boolean;
+  step: stepType;
 }> = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
