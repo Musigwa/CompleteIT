@@ -1,37 +1,56 @@
-import React from 'react';
-import { Text, useColorScheme, View } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import CheckBox from '@react-native-community/checkbox';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Phase, Step } from '../constants';
 import styles from '../styles';
 
-type stepType = {
-  name: string;
-  completed: boolean;
-};
-
-const Section: React.FC<{
-  title: string;
-  completed: boolean;
-  step: stepType;
-}> = ({ children, title }) => {
-  const isDarkMode = useColorScheme() === 'dark';
+const Section: React.FC<Phase> = ({ title, index, steps }) => {
+  const [, setToggleCheckBox] = useState(false);
   return (
     <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          { color: isDarkMode ? Colors.white : Colors.black },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          { color: isDarkMode ? Colors.light : Colors.dark },
-        ]}>
-        {children}
-      </Text>
+      <View style={style.titleContainer}>
+        <View style={style.indexContainer}>
+          <Text style={style.index}>{index}</Text>
+        </View>
+        <Text style={[styles.sectionTitle]}>{title}</Text>
+        {/* <Icon name="upcircleo" /> */}
+      </View>
+      {steps.map((step: Step, idx: number) => (
+        <View style={style.checkBoxContainer} key={idx}>
+          <CheckBox
+            disabled={false}
+            value={step.completed}
+            onValueChange={newValue => setToggleCheckBox(newValue)}
+            style={style.checkBox}
+          />
+          <Text style={[styles.sectionDescription]}>{step.name}</Text>
+        </View>
+      ))}
     </View>
   );
 };
 
+const style = StyleSheet.create({
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  indexContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'black',
+    width: 25,
+    height: 25,
+    borderRadius: 25,
+    marginRight: 10,
+  },
+  index: { color: 'white', fontWeight: 'bold' },
+  checkBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 5,
+  },
+  checkBox: { marginRight: 8 },
+});
 export default Section;

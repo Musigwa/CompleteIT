@@ -7,3 +7,16 @@ export const actionTypes = {
   COMPLETE_PHASE: 'COMPLETE_PHASE',
   DISPLAY_FACT: 'DISPLAY_FACT',
 };
+
+// App-wide types
+export type Step = {
+  name: string;
+  completed: boolean;
+};
+
+export type Phase = {
+  title: string;
+  steps: Step[];
+  completed: boolean;
+  index: number;
+};

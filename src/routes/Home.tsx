@@ -10,7 +10,10 @@ export default () => (
     <Stack.Screen
       name={PROGRESS}
       component={Progress}
-      options={{ headerTitleStyle: { fontWeight: 'bold', fontSize: 18 } }}
+      options={{
+        headerTitleStyle: { fontWeight: 'bold', fontSize: 18 },
+        headerTitleAlign: 'left',
+      }}
     />
   </Stack.Navigator>
 );
