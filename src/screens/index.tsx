@@ -6,20 +6,17 @@ import { useAppSelector } from '../container';
 import styles from '../styles';
 
 const Progress = () => {
-  const { data } = useAppSelector(({ steps }) => steps);
+  const { phases } = useAppSelector(state => state);
+  const checkUpdate = (value: object) => {
+    console.log('The object value after checking==>', value);
+  };
   return (
     <SafeAreaView style={styles.progressContainer}>
-      <StatusBar barStyle={'light-content'} />
+      <StatusBar barStyle="light-content" />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View style={styles.listContainer}>
-          {data.map((sect: Phase, index: number) => (
-            <Section
-              key={index}
-              title={sect.title}
-              completed={false}
-              index={index + 1}
-              steps={sect.steps}
-            />
+          {phases.map((sect: Phase, index: number) => (
+            <Section key={index} toggleCheck={checkUpdate} {...sect} />
           ))}
         </View>
       </ScrollView>

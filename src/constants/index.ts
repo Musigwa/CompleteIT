@@ -17,6 +17,6 @@ export type Step = {
 export type Phase = {
   title: string;
   steps: Step[];
+  id: number;
   completed: boolean;
-  index: number;
 };

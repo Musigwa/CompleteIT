@@ -1,7 +1,6 @@
-package com.completit;
+package com.completeit;
 
 import com.facebook.react.ReactActivity;
-import android.os.Bundle;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,11 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "Completit";
-  }
-
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(null);
+    return "CompleteIT";
   }
 }

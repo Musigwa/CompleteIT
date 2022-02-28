@@ -1,16 +1,18 @@
 import CheckBox from '@react-native-community/checkbox';
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Phase, Step } from '../constants';
 import styles from '../styles';
 
-const Section: React.FC<Phase> = ({ title, index, steps }) => {
-  const [, setToggleCheckBox] = useState(false);
+const Section: React.FC<
+  Phase & { toggleCheck: (value: object) => void }
+> = phase => {
+  const { title, id: parentId, toggleCheck, steps } = phase;
   return (
     <View style={styles.sectionContainer}>
       <View style={style.titleContainer}>
         <View style={style.indexContainer}>
-          <Text style={style.index}>{index}</Text>
+          <Text style={style.index}>{parentId}</Text>
         </View>
         <Text style={[styles.sectionTitle]}>{title}</Text>
         {/* <Icon name="upcircleo" /> */}
@@ -18,9 +20,8 @@ const Section: React.FC<Phase> = ({ title, index, steps }) => {
       {steps.map((step: Step, idx: number) => (
         <View style={style.checkBoxContainer} key={idx}>
           <CheckBox
-            disabled={false}
             value={step.completed}
-            onValueChange={newValue => setToggleCheckBox(newValue)}
+            onValueChange={status => toggleCheck({ status, step, parentId })}
             style={style.checkBox}
           />
           <Text style={[styles.sectionDescription]}>{step.name}</Text>

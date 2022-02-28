@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Completit.app"
-               BlueprintName = "Completit"
-               ReferencedContainer = "container:Completit.xcodeproj">
+               BuildableName = "CompleteIT.app"
+               BlueprintName = "CompleteIT"
+               ReferencedContainer = "container:CompleteIT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CompletitTests.xctest"
-               BlueprintName = "CompletitTests"
-               ReferencedContainer = "container:Completit.xcodeproj">
+               BuildableName = "CompleteITTests.xctest"
+               BlueprintName = "CompleteITTests"
+               ReferencedContainer = "container:CompleteIT.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Completit.app"
-            BlueprintName = "Completit"
-            ReferencedContainer = "container:Completit.xcodeproj">
+            BuildableName = "CompleteIT.app"
+            BlueprintName = "CompleteIT"
+            ReferencedContainer = "container:CompleteIT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Completit.app"
-            BlueprintName = "Completit"
-            ReferencedContainer = "container:Completit.xcodeproj">
+            BuildableName = "CompleteIT.app"
+            BlueprintName = "CompleteIT"
+            ReferencedContainer = "container:CompleteIT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

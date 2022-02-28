@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Foundation",
+    "id": 1,
+    "completed": true,
+    "steps": [
+      { "name": "Setup virtual office", "completed": false },
+      { "name": "Set mission & vision", "completed": false },
+      { "name": "Select Business name", "completed": true },
+      { "name": "Buy domains", "completed": true }
+    ]
+  },
+  {
+    "title": "Make a Business Plan",
+    "id": 2,
+    "completed": false,
+    "steps": [
+      { "name": "Create roadmap", "completed": false },
+      { "name": "Competitor analysis", "completed": false }
+    ]
+  },
+  {
+    "title": "Secure Funding",
+    "id": 3,
+    "completed": false,
+    "steps": [
+      { "name": "Friends and family", "completed": true },
+      { "name": "Angel investors", "completed": false },
+      { "name": "Venture capitalists", "completed": true },
+      { "name": "Bank loans", "completed": false }
+    ]
+  },
+  {
+    "title": "Find the Right People",
+    "id": 4,
+    "completed": false,
+    "steps": [
+      { "name": "Attorneys", "completed": false },
+      { "name": "Certified Public Accountants", "completed": false },
+      { "name": "Insurance professionals", "completed": true },
+      { "name": "Bankers", "completed": true }
+    ]
+  },
+  {
+    "title": "Comply with the Laws",
+    "id": 5,
+    "completed": false,
+    "steps": [
+      { "name": "Applying for a business license", "completed": false },
+      { "name": "Registering your business name", "completed": false },
+      { "name": "Getting a federal tax ID number", "completed": true },
+      { "name": "Filing for a trademark", "completed": false },
+      { "name": "Creating a separate bank account", "completed": false },
+      {
+        "name": "Familiarizing yourself with industry regulations",
+        "completed": true
+      },
+      { "name": "Building contracts for clients", "completed": false }
+    ]
+  },
+  {
+    "title": "Develop a Marketing Plan",
+    "id": 6,
+    "completed": false,
+    "steps": [
+      { "name": "Establish a brand identity", "completed": false },
+      { "name": "Stand out from competition", "completed": false },
+      {
+        "name": "Create customer relationships and build loyalty",
+        "completed": false
+      },
+      {
+        "name": "Increase visibility, which attracts new customers",
+        "completed": false
+      },
+      { "name": "Strengthen your company's reputation", "completed": false }
+    ]
+  },
+  {
+    "title": "Discovery",
+    "id": 7,
+    "completed": false,
+    "steps": [
+      { "name": "Create roadmap", "completed": false },
+      { "name": "Competitor analysis", "completed": false }
+    ]
+  },
+  {
+    "title": "Delivery",
+    "id": 8,
+    "completed": false,
+    "steps": [
+      { "name": "Release marketing website", "completed": true },
+      { "name": "Release MVP", "completed": false }
+    ]
+  }
+]
